@@ -1,0 +1,182 @@
+/* 其他自定义样式 */
+
+body {
+  background-color: #f0f0f0; /* 仿照AHdark's Blog的背景颜色 */
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  transition: background-color 0.3s, color 0.3s;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+body.dark-mode {
+  color: #f0f0f0;
+  background-color: #222;
+}
+
+.layout {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  flex: 1;
+}
+
+h1, h2 {
+  color: #2c3e50;
+}
+
+body.dark-mode h1, body.dark-mode h2 {
+  color: #ecf0f1;
+}
+
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+body.dark-mode a {
+  color: #5dade2;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #ffffff; /* 白天主题下的白色背景 */
+  color: #000000; /* 白天主题下的黑色字体 */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-mode .header {
+  background-color: #000000; /* 黑夜主题下的黑色背景 */
+  color: #ffffff; /* 黑夜主题下的白色字体 */
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 2rem; /* 在logo和导航之间添加一些间距 */
+}
+
+.nav {
+  display: flex;
+  gap: 2.5rem;  /* 将间距从 5rem 减少到 2.5rem */
+}
+
+.nav-link {
+  color: inherit; /* 使用继承的颜色 */
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+}
+
+.nav-link:hover {
+  color: #cbd5e0;
+}
+
+.content-wrapper {
+  display: flex;
+  gap: 2rem;
+}
+
+main {
+  flex: 1;
+}
+
+.sidebar {
+  width: 250px;
+  flex-shrink: 0;
+}
+
+.profile-card {
+  background-color: #000000; /* 将背景色改为黑色 */
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  color: #ffffff; /* 将文字颜色改为白色，以便在黑色背景上清晰可见 */
+}
+
+body.dark-mode .profile-card {
+  background-color: #1a1a1a; /* 深色模式下稍微亮一点的黑色 */
+}
+
+.profile-image {
+  border-radius: 50%;
+  margin-bottom: 1rem;
+}
+
+.profile-card h2 {
+  margin-bottom: 0.5rem;
+  color: #ffffff; /* 确保标题也是白色 */
+}
+
+.profile-card p {
+  font-size: 0.9rem;
+  color: #e0e0e0; /* 稍微柔和一点的白色，以增加可读性 */
+  white-space: pre-line;  /* 这将保留换行符 */
+  line-height: 1.4;  /* 调整行高以适应更多文本 */
+}
+
+body.dark-mode .profile-card p {
+  color: #bbb; /* 深色模式下保持原来的颜色 */
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    margin-top: 2rem;
+  }
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.language-toggle,
+.theme-toggle {
+  background: none;
+  border: none;
+  font-size: 1rem;
+  cursor: pointer;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  color: inherit; /* 使用继承的颜色 */
+}
+
+.language-toggle {
+  font-weight: bold;
+}
+
+body.dark-mode .language-toggle,
+body.dark-mode .theme-toggle {
+  color: #f0f0f0;
+}
+
+footer {
+  background-color: #f5f5f7; /* 类似苹果原生应用的浅灰色 */
+  padding: 1rem;
+  text-align: center;
+  margin-top: auto; /* 确保footer始终在底部 */
+}
+
+body.dark-mode footer {
+  background-color: #1c1c1e; /* 深色模式下的深灰色 */
+  color: #f0f0f0;
+}

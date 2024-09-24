@@ -1,16 +1,10 @@
-import { defineCollection, z } from 'astro:content';
+// 移除 Astro 特定的导入
+// import { defineCollection, z } from 'astro:content';
 
-const blog = defineCollection({
+// 使用 Next.js 兼容的方式定义内容集合
+const blog = {
 	type: 'content',
-	// Type-check frontmatter using a schema
-	schema: z.object({
-		title: z.string(),
-		description: z.string(),
-		// Transform string to Date object
-		pubDate: z.coerce.date(),
-		updatedDate: z.coerce.date().optional(),
-		heroImage: z.string().optional(),
-	}),
-});
+	// 其他配置...
+};
 
-export const collections = { blog };
+export { blog };

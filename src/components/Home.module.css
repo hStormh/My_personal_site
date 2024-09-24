@@ -1,0 +1,120 @@
+.home {
+  display: flex;
+  flex-direction: row; /* 改为横向布局 */
+  align-items: flex-start; /* 顶部对齐 */
+  justify-content: space-between; /* 改为 space-between 以增加间距 */
+  gap: 40px; /* 增加整体间距 */
+  padding: 20px; /* 添加内边距 */
+}
+
+.sidebar {
+  width: 20%; /* 固定宽度 */
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.categoryBox, .yearBox {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.categoryBox h3, .yearBox h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.categoryBox ul, .yearBox ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.categoryBox li, .yearBox li {
+  margin: 10px 0;
+  color: #666;
+}
+
+.introBox {
+  width: 46.67%; /* 缩小宽度为原来的1.5倍 */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 260px; /* 减少左边距 */
+}
+
+.introBox h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.introBox p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.blogListBox {
+  width: 46.67%; /* 缩小宽度为原来的1.5倍 */
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin-left: 260px; /* 减少左边距 */
+}
+
+.blogListBox h2 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.blogListBox ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.blogListBox li {
+  margin: 10px 0;
+  color: #666;
+}
+
+.blogListBox .date {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.articleShowcase {
+  flex: 1; /* 让示例文章占据剩余空间 */
+  display: flex;
+  flex-direction: column; /* 改为纵向布局 */
+  gap: 20px;
+  justify-content: flex-start; /* 顶部对齐 */
+}
+
+.articleBox {
+  width: 200%; /* 增加宽度为原来的两倍 */
+  background-color: #ffffff; /* 假设背景色为白色 */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.articleBox h3 {
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.articleBox p {
+  color: #666;
+}
+
+.content {
+  flex: 0 0 46.67%; /* 固定宽度为46.67% */
+  display: flex;
+  flex-direction: column; /* 改为纵向布局 */
+  gap: 20px;
+  margin-right: 40px; /* 增加与网页右边框的距离 */
+}
+
+/* 删除不再需要的样式 */
